@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Employee List</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+    <script type="text/javascript" src="{% static 'js/scripts.js' %}"></script>
+</head>
+<body>
+    {% for employee in employees %}
+    <div>
+        <h2>{{ employee.name }}</h2>
+        <p>{{ employee.position }}</p>
+        <p>{{ employee.responsibilities }}</p>
+        <div class="battery" style="width: {{ employee.free_time }}%">
+            {{ employee.free_time }}%
+        </div>
+    </div>
+    {% endfor %}
+</body>
+</html>
